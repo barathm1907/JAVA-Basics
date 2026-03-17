@@ -1,0 +1,15 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class java_basic {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        System.out.println("Enter the range start: "); // get the input for the range
+        int left=sc.nextInt();
+        System.out.println("Enter the range end: ");
+        int right=sc.nextInt();
+        System.out.println((right*(right+1))/2 - (left*(left-1))/2); // the sum of numbers from 1 to n is n(n+1)/2, so the sum of numbers from left to right is the sum of numbers from 1 to right minus the sum of numbers from 1 to left-1
+
+    }
+}
