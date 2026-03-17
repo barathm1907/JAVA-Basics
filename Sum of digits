@@ -1,0 +1,19 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class java_basic {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number : "); //get the input
+		int n=sc.nextInt();
+        n=Math.abs(n); // to handle negative numbers, we take the absolute value of the number
+        System.out.println(fun(n)); 
+    }
+    
+    static int fun(int n) { 
+        if(n < 10)
+            return n;
+        return n % 10 +fun(n/10); // the sum of digits of a number is the last digit of the number plus the sum of digits of the number without the last digit
+    }
+}
