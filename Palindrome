@@ -1,0 +1,21 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class java_basic {
+    public static void main(String[] args) {
+        Scanner sc=new Scanner(System.in);
+        int n=sc.nextInt();
+        int org=n; // to store the original number, we need to compare the original number with the reverse of the number to check if the number is a palindrome or not
+        int rev=0;
+        while(n!=0) {
+            rev=rev*10+(n%10); // the reverse of a number is the last digit of the number plus the reverse of the number without the last digit multiplied by 10
+            n/=10; 
+        }
+        if(org==rev) {
+            System.out.println("The number is a palindrome.");
+        } else {
+            System.out.println("The number is not a palindrome.");
+        }
+    }
+}
