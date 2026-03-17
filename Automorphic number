@@ -1,0 +1,17 @@
+import java.util.*;
+
+class java_basic {
+    public static void main(String[] args) {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter a number: ");
+        int n = sc.nextInt();
+
+        String num =String.valueOf(n);
+        String square = String.valueOf(n*n);
+
+        if (square.endsWith(num))
+            System.out.println(n + " is a Automorphic number");
+        else
+            System.out.println(n + " is not an Automorphic number");
+    }
+}
