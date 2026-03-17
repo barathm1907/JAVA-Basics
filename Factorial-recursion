@@ -1,0 +1,18 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class java_basic {
+    public static void main(String[] args) {
+     	Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number : ");
+		int n=sc.nextInt();
+        System.out.println(fact(n)); // calling the function to calculate factorial
+    }
+    
+    static int fact(int n) { 
+        if(n ==0)   // base case: factorial of 0 is 1
+            return 1;
+        return n*fact(n-1); // recursive call: n! = n * (n-1)!
+    }
+}

@@ -1,0 +1,25 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class java_basic
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc= new Scanner(System.in);
+		int n=sc.nextInt();
+	    int c=(int)Math.log10(n)+1;
+	    int t=n;
+	    int a=0;
+	    while(n!=0)
+	    {
+	        int d=n%10;
+	        a=a+(int)Math.pow(d,c);
+	        n/=10;
+	    }
+	    if(a==t)
+	        System.out.println("Armstrong number");
+	    else
+	        System.out.println("Not an Armstrong number");
+	}
+}
