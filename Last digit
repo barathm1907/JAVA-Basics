@@ -1,0 +1,15 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class Codechef
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number : "); //get the input
+		int n=sc.nextInt();
+		System.out.print("The last digit of "+n+" is : "+n%10);  // the last digit of a number is the remainder when the number is divided by 10 using modulus operator
+	}
+
+}
