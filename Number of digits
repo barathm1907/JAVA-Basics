@@ -1,0 +1,20 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class java_basic
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc=new Scanner(System.in);
+		System.out.println("Enter the number : "); //get the input
+		int n=sc.nextInt();
+		System.out.print("The count digit of "+n+" is : ");  // the count of digits in a number is given by the formula log10(n)+1
+		System.out.println(count(n));       
+	}
+	static int count(int n) // function to count the number of digits in a number
+	{
+	    return (int)Math.log10(n)+1;    // log10(n) gives the number of digits in a number 
+	    
+	}
+}
