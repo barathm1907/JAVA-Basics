@@ -1,0 +1,33 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class java_basic {
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner sc =new Scanner(System.in);
+        System.out.println("Enter the range left  ");
+        int left =sc.nextInt();
+        System.out.println("Enter the range right  ");
+        int right =sc.nextInt();
+
+        System.out.println("Armstrong numbers between " + left + " and " + right + "are :");
+        for (int i=left;i<=right;i++) {
+            if (isArmstrong(i))
+                System.out.println(i);
+        }
+    }
+
+    static boolean isArmstrong(int n) {
+        if (n<0) 
+            return false;
+        int c =(int)Math.log10(n)+1;  // number of digits
+        int t=n;
+        int a=0;
+        while (n!=0) {
+            int d=n%10;
+            a=a+(int)Math.pow(d,c);
+            n/=10;
+        }
+        return a==t;
+    }
+}
