@@ -1,0 +1,30 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class java_basic {
+    public static void main(String[] args) throws java.lang.Exception {
+        Scanner sc = new Scanner(System.in);
+        System.out.println("Enter the number : ");
+        int n = sc.nextInt();
+        int perfect = divisors(n);
+        if (perfect == n)
+            System.out.println("The number is a perfect number");
+        else
+            System.out.println("The number is not a perfect number");
+    }
+
+    static int divisors(int n) {
+    int sum = 1;                       
+    for (int i=2;i*i<=n;i++)
+     {
+        if (n%i==0) {
+            if (i*i==n)
+                sum+=i;              
+            else
+                sum+= i+(n/i);       
+        }
+    }
+    return sum;
+}
+}
