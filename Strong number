@@ -1,0 +1,31 @@
+import java.util.*;
+import java.lang.*;
+import java.io.*;
+
+class java_basic
+{
+	public static void main (String[] args) throws java.lang.Exception
+	{
+		Scanner sc= new Scanner(System.in);
+        System.out.println("Enter the number : "); //get the input
+        int n=sc.nextInt();
+        int sum=0,t=n;
+        while(n!=0)
+        {
+            int d=n%10;
+            sum+=factorial(d); // the sum of the factorial of the digits of a number is the sum of the factorial of each digit of the number
+            n/=10;
+        }
+        if(sum==t)
+            System.out.println("The number is a strong number");
+        else
+            System.out.println("The number is not a strong number");
+    }
+    static int factorial(int n)
+    {
+        if(n==0)
+            return 1;
+        else
+            return n*factorial(n-1);
+    }
+}
